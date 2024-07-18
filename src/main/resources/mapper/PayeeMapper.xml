@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wh.bank.mapper.PayeeMapper">
+
+    <resultMap id="BaseResultMap" type="com.wh.bank.entity.Payee">
+            <id property="payeeId" column="payee_id" jdbcType="INTEGER"/>
+            <result property="accountId" column="account_id" jdbcType="VARCHAR"/>
+            <result property="toAccountId" column="to_account_id" jdbcType="VARCHAR"/>
+            <result property="identityName" column="identity_name" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        payee_id,account_id,to_account_id,
+        identity_name,create_time
+    </sql>
+</mapper>

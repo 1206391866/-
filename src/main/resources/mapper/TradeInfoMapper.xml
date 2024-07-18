@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wh.bank.mapper.TradeInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.wh.bank.entity.TradeInfo">
+            <id property="tradeId" column="trade_id" jdbcType="INTEGER"/>
+            <result property="tradeType" column="trade_type" jdbcType="VARCHAR"/>
+            <result property="fromAccount" column="from_account" jdbcType="VARCHAR"/>
+            <result property="toAccount" column="to_account" jdbcType="VARCHAR"/>
+            <result property="tradeMoney" column="trade_money" jdbcType="INTEGER"/>
+            <result property="tradeTime" column="trade_time" jdbcType="TIMESTAMP"/>
+            <result property="summary" column="summary" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        trade_id,trade_type,from_account,
+        to_account,trade_money,trade_time,
+        summary
+    </sql>
+</mapper>
